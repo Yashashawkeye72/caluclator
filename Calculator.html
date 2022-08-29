@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+   <style type="text/css" media="all">
+     
+    .input{
+      width: 50%;
+      height: 20px;
+    }  
+    .but{
+      height: 2rem;
+      font-size: 2rem;
+    
+      
+    }
+    .p{
+      font-size: 2rem;
+      font-family: DynaPuff;
+    }
+    </style>
+    
+</head>
+
+<body>
+  <input class="input" type="text" name="" id="field" value=""/><br /><br />
+  
+ 
+  <button class="but" type="submit" onclick="addfun()">  +  </button>
+  <button class="but" type="submit" onclick="subfun()">  -  </button>
+  <button class="but" type="submit" onclick="mutltifun()">  *  </button>
+  <button class="but" type="submit" onclick="divfun()">  /  </button><br /><br />
+  <button class="but" type="submit" onclick="myfunction()"> Get Result</button><br /><br />
+  <p class="p" id="p"></p>
+  <script type="text/javascript" charset="utf-8">
+  function myfunction(){
+    let a=document.getElementById("field").value;
+    let n=eval(a);
+    document.getElementById("p").innerHTML=("the result is " +n);}
+    function addfun(){
+    document.getElementById("field").value+="+";
+      document.getElementById("field").focus();
+    }
+    function subfun(){
+    document.getElementById("field").value+="-";
+      document.getElementById("field").focus();
+    }
+    function mutltifun(){
+    document.getElementById("field").value+="*";
+      document.getElementById("field").focus();
+    }
+    function divfun(){
+    document.getElementById("field").value+="/";
+      document.getElementById("field").focus();
+    }
+    let a=Math.exp(43);
+    console.log(a);
+  
+  
+  </script>
+</body>
+
+</html>
